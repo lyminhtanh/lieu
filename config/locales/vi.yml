@@ -1197,7 +1197,7 @@ vi:
     summary:
     tax: Thuế
     tax_categories: Loại thuế
-    tax_category: Biểu thuế
+    tax_category: Loại thuế
     tax_code:
     tax_included:
     tags_placeholder: tags
