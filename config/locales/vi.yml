@@ -1246,7 +1246,7 @@ vi:
     tracking_url_placeholder:
     transaction_id:
     transfer_from_location: Chuyển từ
-    transfer_stock: Chuyển hàng
+    transfer_stock: Chuyển kho
     transfer_to_location: Chuyển tới
     tree: Cây
     type: Loại
