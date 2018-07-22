@@ -282,6 +282,7 @@ vi:
       not_locked: không bị khoá
       not_saved: "%{count} lỗi cấm %{resource} này lưu:"
   spree:
+    about_us: Về chúng tôi
     abbreviation: Từ khóa tắt
     accept:
     acceptance_errors:
@@ -455,6 +456,7 @@ vi:
     confirm: Xác nhận
     confirm_delete: Xác nhận xóa
     confirm_password: Xác nhận mật khẩu
+    contact: Liên hệ
     continue: Tiếp tục
     continue_shopping: Tiếp tục mua sắm
     cost_currency: Tiền giá

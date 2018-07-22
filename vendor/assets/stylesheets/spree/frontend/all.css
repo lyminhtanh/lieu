@@ -10,22 +10,24 @@
 
 /*@import "bootstrap";*/
 body{
+    animation-name: fadeIn;
     font-family: "Lato", Helvetica, Arial, sans-serif;
 }
 body >.container {
-    margin: 2px 0;
-    width: 100%;
-    padding: 0;
+margin: 2px 0;
+width: 100%;
+padding: 0;
+margin-top: 123px;
 
 }
 
 #spree-header #header > #container{
-    margin: 0;
+margin: 0;
 
 }
 
 #spree-header{
-    /*border-bottom-style: groove;*/
+/*border-bottom-style: groove;*/
     box-shadow: 0 2px #BBBBBB;
     padding-top: 0 !important;
     margin-bottom: 0
@@ -38,10 +40,12 @@ body >.container {
 
 .home-banner-carousel{
     display: block;
-    height: -moz-calc(100vh - 129px); /* Firefox */
-    height: -webkit-calc(100vh - 129px); /* Chrome, Safari */
-    height: calc(100vh - 129px); /* IE9+ and future browsers */
+    width: max-content;
+    height: -moz-calc(100vh - 141px); /* Firefox */
+    height: -webkit-calc(100vh - 141px); /* Chrome, Safari */
+    height: calc(100vh - 141px); /* IE9+ and future browsers */
     background-color: #BBBBBB;
+    /*margin-top: 129px;*/
     /*background: url("http://via.placeholder.com/1440x720") no-repeat center;*/
 }
 .home-banner-carousel img{
@@ -133,3 +137,26 @@ button{
 .home-footer-company-info-wrapper{
 
 }
+
+/*nav-bar*/
+#spree-header .nav a{
+    font-size: 1.5em;
+    color: #2d2d2d;
+}
+#nav-bar{
+    border-top: 1px solid #d8d8d8;;
+}
+#spree-header .nav a:hover{
+    background: none;
+    color: #ef1c23;
+}
+/*social-bar*/
+.social-bar-icon{
+    font-size: large;
+    margin: 0 1vw;
+}
+.social-bar-icon:hover{
+    color: #ef1c23;
+}
+
+
