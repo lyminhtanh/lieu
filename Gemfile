@@ -71,6 +71,6 @@ gem 'globalize', github: 'globalize/globalize'
 gem 'activemodel-serializers-xml'
 
 #spree html invoice
-gem 'spree_html_invoice' , github: 'vinsol-spree-contrib/spree-html-invoice'
+# gem 'spree_html_invoice' , github: 'vinsol-spree-contrib/spree-html-invoice'
 
-gem 'bootstrap-sass', '~> 3.3.7'
+# gem 'bootstrap-sass', '~> 3.3.7'

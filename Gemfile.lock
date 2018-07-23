@@ -36,13 +36,6 @@ GIT
       spree_core (>= 3.1.0, < 4.0)
       spree_extension
 
-GIT
-  remote: https://github.com/vinsol-spree-contrib/spree-html-invoice.git
-  revision: 3f6f9eb69d8d1c5b5f48210d4b8d15e8b9c18df4
-  specs:
-    spree_html_invoice (3.4.0)
-      spree_core (>= 3.2.0, < 4.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -444,7 +437,6 @@ PLATFORMS
 DEPENDENCIES
   activemodel-serializers-xml
   bootsnap (>= 1.1.0)
-  bootstrap-sass (~> 3.3.7)
   byebug
   capybara (>= 2.15, < 4.0)
   chromedriver-helper
@@ -460,7 +452,6 @@ DEPENDENCIES
   spree_auth_devise (~> 3.3)
   spree_gateway (~> 3.3)
   spree_globalize!
-  spree_html_invoice!
   spree_i18n!
   spring
   spring-watcher-listen (~> 2.0.0)
