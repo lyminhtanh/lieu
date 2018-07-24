@@ -14,10 +14,11 @@ body{
     font-family: "Lato", Helvetica, Arial, sans-serif;
 }
 body >.container {
-margin: 2px 0;
-width: 100%;
-padding: 0;
-margin-top: 123px;
+    margin: 2px 0;
+    width: 100%;
+    padding: 0;
+    margin-top: 123px;
+    overflow: hidden;
 
 }
 
@@ -159,4 +160,12 @@ button{
     color: #ef1c23;
 }
 
+/* footer */
+.home-footer.row::before{
+    display: none;
+}
+#map{
+    height: 300px;
+    width: 100%;
+}
 
