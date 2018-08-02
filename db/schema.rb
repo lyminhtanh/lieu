@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_07_100897) do
+ActiveRecord::Schema.define(version: 2018_07_10_125334) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -1099,6 +1099,29 @@ ActiveRecord::Schema.define(version: 2018_07_07_100897) do
     t.index ["position"], name: "index_spree_taxons_on_position"
     t.index ["rgt"], name: "index_spree_taxons_on_rgt"
     t.index ["taxonomy_id"], name: "index_taxons_on_taxonomy_id"
+  end
+
+  create_table "spree_themes", force: :cascade do |t|
+    t.string "name"
+    t.string "state"
+    t.string "template_file_file_name"
+    t.string "template_file_content_type"
+    t.integer "template_file_file_size"
+    t.datetime "template_file_updated_at"
+  end
+
+  create_table "spree_themes_templates", force: :cascade do |t|
+    t.string "name"
+    t.text "body"
+    t.string "path"
+    t.string "format"
+    t.string "locale"
+    t.string "handler"
+    t.boolean "partial", default: false
+    t.integer "theme_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["theme_id"], name: "index_spree_themes_templates_on_theme_id"
   end
 
   create_table "spree_trackers", force: :cascade do |t|
