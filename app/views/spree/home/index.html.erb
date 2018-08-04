@@ -17,8 +17,12 @@
 </div>
 <div class="home-product-cate-wrapper row">
   <div class="home-product-cate-carousel">
-
-  </div>
+    <% @taxonomies.first.root.children.each do |taxonomy| %>
+      <div><%= taxonomy.name %></div>
+        <%=   image_tag Rails.application.routes.url_helpers.rails_representation_url taxonomy.icon.try(:attachment).variant(resize: "300x200") if taxonomy.icon %>
+        <%#= link_to image_tag(main_app.url_for(@image.url(:small))), main_app.url_for(@image.url(:product)) %>
+      </div>
+    <% end %>
   <div class="home-product-cat-info">
     <h3 class="home-product-cat-info-title">
       TITLE

@@ -4,7 +4,7 @@ vi:
       spree/address:
         address1: "Địa chỉ 1"
         address2: "Địa chỉ 2"
-        city: Thành phố
+        city: Quận/Huyện
         country: Quốc gia
         firstname: Tên
         lastname: Họ
@@ -109,7 +109,7 @@ vi:
         abbr: Viết tắt
         name: Tên
       spree/state_change:
-        state_changes:
+        state_changes: Theo dõi đơn hàng
         state_from:
         state_to:
         timestamp:
@@ -232,7 +232,7 @@ vi:
       spree/tax_category:
       spree/tax_rate:
       spree/taxon:
-      spree/taxonomy:
+      spree/taxonomy: Phân loại
       spree/tracker:
       spree/user:
       spree/variant:
@@ -308,7 +308,7 @@ vi:
     add: Thêm
     add_action_of_type: Thêm hành động loại
     add_country: Thêm quốc gia
-    add_coupon_code:
+    add_coupon_code: Thêm mã giảm giá
     add_new_header: Tạo Header mới
     add_new_style: Tạo style mới
     add_one: Tạo một
@@ -333,19 +333,19 @@ vi:
     adjustments: "Điều chỉnh"
     admin:
       tab:
-        configuration:
+        configuration: "Cấu hình"
         option_types:
-        orders:
-        overview:
-        products:
-        promotions:
-        promotion_categories:
-        properties:
-        prototypes:
-        reports:
-        taxonomies:
-        taxons:
-        users:
+        orders: "Đơn hàng"
+        overview: "Tổng quan"
+        products: "Sản phẩm"
+        promotions: "Khuyến mãi"
+        promotion_categories: "Loại khuyến mãi"
+        properties: "Thuộc tính"
+        prototypes: "Mẫu hàng"
+        reports: "Báo cáo"
+        taxonomies: "Phân loại"
+        taxons: "Tìm kiếm theo "
+        users: "Người dùng"
       user:
         account:
         addresses:
@@ -474,8 +474,8 @@ vi:
       FRA:
       ITA:
       US:
-    coupon:
-    coupon_code:
+    coupon: Phiếu giảm giá
+    coupon_code: Mã giảm giá
     coupon_code_already_applied: Mã khuyến mại đã được dùng cho đơn hàng khác
     coupon_code_applied: The coupon code was successfully applied to your order.
     coupon_code_better_exists: Mã khuyến mại trước đó có nhiều khuyến mại hơn
@@ -537,11 +537,11 @@ vi:
     description: Miêu tả
     destination: "Đích đến"
     destroy: Hủy diệt
-    details:
+    details: Chi tiết
     discontinue_on: Kết thúc vào ngày
     discount_amount:
     dismiss_banner:
-    display:
+    display: Trình bày
     display_currency:
     doesnt_track_inventory:
     edit: Sửa đổi
@@ -744,7 +744,7 @@ vi:
     new_promotion: Khuyến mại mới
     new_promotion_category: Tạo khuyến mại mới
     new_property: "Đặc tính mới"
-    new_prototype: Nguyên mẫu mới
+    new_prototype: Mẫu hàng mới
     new_refund:
     new_refund_reason:
     new_return_authorization: "Ủy quyền trả về mới"
@@ -976,8 +976,8 @@ vi:
     propagate_all_variants:
     properties: "Đặc tính"
     property: "Đặc tính"
-    prototype: Nguyên mẫu
-    prototypes: Nguyên mẫu
+    prototype: Mẫu hàng
+    prototypes: Mẫu hàng
     provider: Nhà cung cấp
     provider_settings_warning: Nếu thay đổi nhà cung cấp, bạn phải lưu trước khi sửa đổi cấu hình nhà cung cấp
     qty: Số lượng
@@ -1060,8 +1060,8 @@ vi:
     sales_totals: Tổng doanh số
     save_and_continue: Lưu và tiếp tục
     save_my_address:
-    say_no:
-    say_yes:
+    say_no: Không
+    say_yes: Có
     scope: Phạm vi
     search: Tìm kiếm
     search_results: Kết quả tìm kiếm cho '%{keywords}'
@@ -1135,8 +1135,8 @@ vi:
     ssl:
       change_protocol:
     start: Bắt đầu
-    state: Bang
-    state_based: Dựa trên bang
+    state: Tỉnh/Thành
+    state_based: Dựa trên tỉnh/thành
     state_machine_states:
       accepted:
       address:

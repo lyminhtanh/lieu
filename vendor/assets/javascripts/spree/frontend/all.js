@@ -23,5 +23,9 @@ $(document).ready(() => {
         lat: -12.043333,
         lng: -77.028333,
         title: 'Lima'
-    })
+    });
+    $('.carousel').carousel({
+        interval: 2000
+    });
+
 });
