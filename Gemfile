@@ -65,10 +65,10 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'spree', '~> 3.6'
 gem 'spree_auth_devise', '~> 3.3'
 gem 'spree_gateway', '~> 3.3'
-gem 'spree_i18n', github: 'spree-contrib/spree_i18n'
-gem 'spree_globalize', github: 'spree-contrib/spree_globalize', branch: 'master'
-gem 'globalize', github: 'globalize/globalize'
-gem 'activemodel-serializers-xml'
+# gem 'spree_i18n', github: 'spree-contrib/spree_i18n'
+# gem 'spree_globalize', github: 'spree-contrib/spree_globalize', branch: 'master'
+# gem 'globalize', github: 'globalize/globalize'
+# gem 'activemodel-serializers-xml'
 
 #spree html invoice
 # gem 'spree_html_invoice' , github: 'vinsol-spree-contrib/spree-html-invoice'
