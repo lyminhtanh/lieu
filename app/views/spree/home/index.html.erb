@@ -38,20 +38,20 @@
           <% if Spree::HomeController.is_first_item @product_categories, taxonomy %>
             <div class="item active">
               <%= Spree::HomeController.gen_product_category_image_tag taxonomy%>
-              <div class="carousel-caption d-none d-md-block">
-                <h5><%= taxonomy.name %></h5>
+              <div class=" d-none d-md-block">
+                <h5><%=  taxonomy.name.upcase %></h5>
                 <p><%= taxonomy.description %></p>
-                <%= link_to "Link", seo_url(taxonomy) %>
+                <%= link_to "Link", seo_url(taxonomy), :class => "btn view-more-btn" %>
 
               </div>
             </div>
           <% else %>
             <div class="item">
               <%= Spree::HomeController.gen_product_category_image_tag taxonomy%>
-              <div class="carousel-caption d-none d-md-block">
+              <div class=" d-none d-md-block">
                 <h5><%= taxonomy.name %></h5>
                 <p><%= taxonomy.description %></p>
-                <%= link_to "Link", seo_url(taxonomy) %>
+                <%= link_to "Link", seo_url(taxonomy), :class => "btn view-more-btn" %>
 
               </div>
             </div>
@@ -73,67 +73,53 @@
         <span class="sr-only">Next</span>
       </a>
     </div>
-  <div class="home-product-cat-info">
-    <h3 class="home-product-cat-info-title">
-      TITLE
-    </h3>
-    <h4 class="home-product-cat-info-subtitle">
-      Subtitle
-    </h4>
-    <p class="home-product-cat-info-body">
-      Product category body sample
-    </p>
-    <button class="home-product-cat-info-view-more-btn">
-      View more
-    </button>
 
-  </div>
 </div>
-<div class="home-events row">
-  <div class="home-event-item">
-    <div class="home-event-item-img">
-      <img src="">
-    </div>
-    <div class="home-event-item-title">
-      <h3>TITLE</h3>
-    </div>
-    <div class="home-event-item-description">
-      <p>Description Samle</p>
-    </div>
-  </div>
-  <div class="home-event-item">
-    <div class="home-event-item-img">
-      <img src="">
-    </div>
-    <div class="home-event-item-title">
-      <h3>TITLE</h3>
-    </div>
-    <div class="home-event-item-description">
-      <p>Description Samle</p>
-    </div>
-  </div>
-  <div class="home-event-item">
-    <div class="home-event-item-img">
-      <img src="">
-    </div>
-    <div class="home-event-item-title">
-      <h3>TITLE</h3>
-    </div>
-    <div class="home-event-item-description">
-      <p>Ahihihihih</p>
-    </div>
-  </div>
-  <div class="home-event-item">
-    <div class="home-event-item-img">
-      <img src="">
-    </div>
-    <div class="home-event-item-title">
-      <h3>TITLE</h3>
-    </div>
-    <div class="home-event-item-description">
-      <p>Description Samle</p>
-    </div>
-  </div>
+<!--<div class="home-events row">-->
+<!--  <div class="home-event-item">-->
+<!--    <div class="home-event-item-img">-->
+<!--      <img src="">-->
+<!--    </div>-->
+<!--    <div class="home-event-item-title">-->
+<!--      <h3>TITLE</h3>-->
+<!--    </div>-->
+<!--    <div class="home-event-item-description">-->
+<!--      <p>Description Samle</p>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  <div class="home-event-item">-->
+<!--    <div class="home-event-item-img">-->
+<!--      <img src="">-->
+<!--    </div>-->
+<!--    <div class="home-event-item-title">-->
+<!--      <h3>TITLE</h3>-->
+<!--    </div>-->
+<!--    <div class="home-event-item-description">-->
+<!--      <p>Description Samle</p>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  <div class="home-event-item">-->
+<!--    <div class="home-event-item-img">-->
+<!--      <img src="">-->
+<!--    </div>-->
+<!--    <div class="home-event-item-title">-->
+<!--      <h3>TITLE</h3>-->
+<!--    </div>-->
+<!--    <div class="home-event-item-description">-->
+<!--      <p>Ahihihihih</p>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  <div class="home-event-item">-->
+<!--    <div class="home-event-item-img">-->
+<!--      <img src="">-->
+<!--    </div>-->
+<!--    <div class="home-event-item-title">-->
+<!--      <h3>TITLE</h3>-->
+<!--    </div>-->
+<!--    <div class="home-event-item-description">-->
+<!--      <p>Description Samle</p>-->
+<!--    </div>-->
+<!--  </div>-->
 
 </div>
   <div class="home-partners row">
@@ -153,20 +139,20 @@
             <% if Spree::HomeController.is_first_item @brands, taxonomy %>
               <div class="item active">
                 <%= Spree::HomeController.gen_product_category_image_tag taxonomy%>
-                <div class="carousel-caption d-none d-md-block">
+                <div class="d-none d-md-block">
                   <h5><%= taxonomy.name %></h5>
                   <p><%= taxonomy.description %></p>
-                  <%= link_to "Link", seo_url(taxonomy) %>
+                  <%= link_to "Link", seo_url(taxonomy), :class => "btn view-more-btn" %>
 
                 </div>
               </div>
             <% else %>
               <div class="item">
                 <%= Spree::HomeController.gen_product_category_image_tag taxonomy%>
-                <div class="carousel-caption d-none d-md-block">
+                <div class="d-none d-md-block">
                   <h5><%= taxonomy.name %></h5>
                   <p><%= taxonomy.description %></p>
-                  <%= link_to "Link", seo_url(taxonomy) %>
+                  <%= link_to "Link", seo_url(taxonomy), :class => "btn view-more-btn" %>
 
                 </div>
               </div>
@@ -193,7 +179,10 @@
   </div>
 <div class="home-footer row">
   <div class="home-footer-company-info-wrapper">
-    <h3>Contact</h3>
+    <h3><%= "Thông tin liên hệ".upcase %></h3>
+    <p>125 Nguyễn Trãi, Phường 3, Quận 5, TP.HCM</p>
+    <p> E-Mail : lieu@lieu.vn</p>
+    <p> Hotline đặt hàng: 02-822-533-095</p>
     <div class="home-footer-company-info-address">
 
     </div>
@@ -201,7 +190,22 @@
     </div>
   </div>
   <div class="home-footer-coop-form">
-    <h3>home-footer-coop-form</h3>
+    <h3><%= "đặt hàng số lượng lớn".upcase %></h3>
   </div>
 </div>
+  <div class="copyright-footer row">
+    <div class="copyright-info">
+      <p>© 2016 - Bản quyền của Công Ty TNHH LIEU - lieu.vn</p>
+      <p>Giấy chứng nhận Đăng ký Kinh doanh số xxxxxxx do Sở Kế hoạch và Đầu tư Thành phố Hồ Chí Minh cấp ngày 06/01/2010</p>
+<!--      <div class="home-footer-company-info-address">-->
+
+<!--      </div>-->
+<!--      <div id="map" class="home-footer-company-info-map">-->
+<!--      </div>-->
+    </div>
+    <div class="trade-logo">
+     <img src="http://online.gov.vn/PublicImages/2015/08/27/11/20150827110756-dathongbao.png" >
+
+    </div>
+  </div>
 </div>
