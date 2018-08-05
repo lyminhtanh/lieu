@@ -74,3 +74,5 @@ gem 'spree_gateway', '~> 3.3'
 # gem 'spree_html_invoice' , github: 'vinsol-spree-contrib/spree-html-invoice'
 
 # gem 'bootstrap-sass', '~> 3.3.7'
+# mail
+gem 'spree_mail_settings', github: 'spree-contrib/spree_mail_settings'
