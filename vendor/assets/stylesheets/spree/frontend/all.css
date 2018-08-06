@@ -52,6 +52,19 @@ margin: 0;
     /*background: url("http://via.placeholder.com/1440x720") no-repeat center;*/
     position: relative;
 }
+
+.home-product-cate-carousel, .home-partners-carousel{
+    display: block;
+    /*width: max-content;*/
+    height: 50vh; /* Firefox */
+    /*height: -webkit-calc(70vh - 141px); !* Chrome, Safari *!*/
+    /*height: calc(70vh - 141px); !* IE9+ and future browsers *!*/
+    /*!*background-color: #BBBBBB;*!*/
+    /*margin-top: 129px;*/
+    /*background: url("http://via.placeholder.com/1440x720") no-repeat center;*/
+    position: relative;
+}
+
 .home-banner-carousel img{
     width: 100%;
     height: 100%;
@@ -151,7 +164,7 @@ button{
 
 .home-footer{
     display: grid;
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 40% 60%;
 }
 .home-footer-company-info-wrapper{
 
@@ -185,7 +198,8 @@ button{
 #map{
     height: 300px;
     /*width: 100%;*/
-    margin-right: 5vw;
+    margin: 2vw 2vw 2vw 0;
+
 }
 
 .home-end-trade-logo img{
@@ -245,10 +259,17 @@ button{
     top: 0;
 }
 
-.view-more-btn{
+.contact-page .btn, .send-contact-info-btn-wrapper button, .view-more-btn{
     color: #fff;
     background-color: #ef1c23;
-
+    border: none;
+}
+.contact-page .btn a{
+    color: #fff;
+}
+.send-contact-info-btn-wrapper button{
+    margin: 5vh 0;
+    width: 100%;
 }
 
 .carousel-control, .carousel-control:hover, .carousel-control:focus{
@@ -292,4 +313,33 @@ button{
     padding: 1vw 1vh;
     width: 10vw;
     /*height: 50% ;*/
+}
+
+/*ABOUT-US*/
+article{
+    position: relative;
+    /* text-align: center; */
+    margin-left: 20vw;
+}
+.about-us-img{
+
+    margin-top: 5vh;
+}
+.about-us-img img{
+    width: 100%;
+}
+
+.about-us-content h1{
+    color: #ef1c23;
+    border-bottom: 1px solid #d8d8d8;
+    padding-bottom: 1vh;
+    width: fit-content;
+}
+
+
+
+.contact-page{
+    grid-template-columns: 50% 50%;
+    margin-top: 8vh;
+    margin-left: 5vw;
 }

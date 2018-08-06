@@ -4,7 +4,7 @@
       <%= link_to Spree.t(:home), root_path %>
     </li>
     <li id="link_to_company_info" data-hook>
-      <%= link_to Spree.t(:about_us), root_path %>
+      <%= link_to Spree.t(:about_us), spree.about_uses_path %>
     </li>
 <!--    <li id="" data-hook>-->
     <%#= render partial: 'spree/shared/search' %>
@@ -14,7 +14,7 @@
     </li>
 
     <li id="link-to-contact">
-      <%= link_to Spree.t(:contact), spree.root_path %>
+      <%= link_to Spree.t(:contact), spree.company_contact_infos_path %>
     </li>
 
     <li id="link-to-auth" data-hook>

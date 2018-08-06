@@ -1,0 +1,21 @@
+<div class="contact-page home-footer row">
+  <div class="home-footer-company-info-wrapper">
+    <h3><%= @company_contact_info.contact_info_title.upcase %></h3>
+    <p><%= @company_contact_info.address %></p>
+    <p> E-Mail : <%= @company_contact_info.email %></p>
+    <p> Hotline đặt hàng: <%= @company_contact_info.phone %></p>
+    <div class="home-footer-company-info-address">
+
+    </div>
+    <div id="map" class="home-footer-company-info-map">
+    </div>
+  </div>
+  <div class="home-footer-coop-form">
+    <h3><%= @company_contact_info.recruitment_title.upcase %></h3>
+    <p><%= @company_contact_info.recruitment_description %></p>
+
+      <div data-hook="send_info_btn" class="send-contact-info-btn-wrapper btn btn-primary">
+        <a href=<%= @company_contact_info.recruitment_file_url %> >Tải file</a>
+      </div>
+  </div>
+</div>

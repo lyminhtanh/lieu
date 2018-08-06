@@ -41,7 +41,7 @@
               <div class=" d-none d-md-block">
                 <h5><%=  taxonomy.name.upcase %></h5>
                 <p><%= taxonomy.description %></p>
-                <%= link_to "Link", seo_url(taxonomy), :class => "btn view-more-btn" %>
+                <%= link_to Spree.t(:show_all_category_products), seo_url(taxonomy), :class => "btn view-more-btn" %>
 
               </div>
             </div>
@@ -51,7 +51,7 @@
               <div class=" d-none d-md-block">
                 <h5><%= taxonomy.name %></h5>
                 <p><%= taxonomy.description %></p>
-                <%= link_to "Link", seo_url(taxonomy), :class => "btn view-more-btn" %>
+                <%= link_to Spree.t(:show_all_category_products), seo_url(taxonomy), :class => "btn view-more-btn" %>
 
               </div>
             </div>
@@ -140,9 +140,9 @@
               <div class="item active">
                 <%= Spree::HomeController.gen_product_category_image_tag taxonomy%>
                 <div class="d-none d-md-block">
-                  <h5><%= taxonomy.name %></h5>
-                  <p><%= taxonomy.description %></p>
-                  <%= link_to "Link", seo_url(taxonomy), :class => "btn view-more-btn" %>
+<!--                  <h5><%#= taxonomy.name %></h5>-->
+<!--                  <p><%#= taxonomy.description %></p>-->
+                  <%= link_to Spree.t(:show_all_brand_products), seo_url(taxonomy), :class => "btn view-more-btn" %>
 
                 </div>
               </div>
@@ -150,9 +150,9 @@
               <div class="item">
                 <%= Spree::HomeController.gen_product_category_image_tag taxonomy%>
                 <div class="d-none d-md-block">
-                  <h5><%= taxonomy.name %></h5>
-                  <p><%= taxonomy.description %></p>
-                  <%= link_to "Link", seo_url(taxonomy), :class => "btn view-more-btn" %>
+<!--                  <h5><%#= taxonomy.name %></h5>-->
+<!--                  <p><%#= taxonomy.description %></p>-->
+                  <%= link_to Spree.t(:show_all_brand_products), seo_url(taxonomy), :class => "btn view-more-btn" %>
 
                 </div>
               </div>
@@ -191,6 +191,24 @@
   </div>
   <div class="home-footer-coop-form">
     <h3><%= "đặt hàng số lượng lớn".upcase %></h3>
+    <%= form_for @customer_contact do |customer_contact_form| %>
+      <%= customer_contact_form.label Spree.t(:fullname) %>
+      <%= customer_contact_form.text_field :name, class: 'form-control', required: true %>
+
+      <%= customer_contact_form.label Spree.t(:phone) %>
+      <%= customer_contact_form.phone_field :phone, class: 'form-control', required: true %>
+
+      <%= customer_contact_form.label Spree.t(:email) %>
+      <%= customer_contact_form.email_field :email, class: 'form-control', tabindex: 1, placeholder: Spree.t(:email) %>
+
+      <%= customer_contact_form.label Spree.t(:address1) %>
+      <%= customer_contact_form.text_field :address, class: 'form-control', placeholder: Spree.t(:address1), required: true %>
+
+      <div data-hook="send_info_btn" class="form-actions send-contact-info-btn-wrapper">
+        <%= button Spree.t(:send_contact_info), 'search'%>
+      </div>
+  <% end %>
+
   </div>
 </div>
   <div class="copyright-footer row">

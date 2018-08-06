@@ -619,6 +619,7 @@ vi:
     free_shipping: Giao hàng miễn phí
     free_shipping_amount:
     front_end: Front End
+    fullname: Họ và tên
     gateway: Gateway
     gateway_config_unavailable: Không có Gateway cho môi trường này
     gateway_error: Lỗi Gateway
@@ -1074,6 +1075,7 @@ vi:
     select_from_prototype: Lựa chọn từ nguyên mẫu
     select_stock: Chọn hàng
     send_copy_of_all_mails_to: Gửi bản sao tất cả thư đến
+    send_contact_info: Gửi thông tin
     send_mails_as: Gửi thư như
     server: Server
     server_error: Máy chủ bị lỗi
@@ -1121,6 +1123,8 @@ vi:
     shopping_cart: Sọt mua sắm
     show: Xem
     show_active: Liệt kê đơn còn hiệu lực
+    show_all_category_products: "Xem các sản phẩm của nhóm này"
+    show_all_brand_products: "Xem các sản phẩm của thương hiệu này"
     show_deleted: Hiện đơn hàng đã xóa
     show_only_complete_orders: Chỉ hiện đơn hàng đã hoàn tất
     show_only_considered_risky: Chỉ hiện đơn hàng rủi ro
@@ -1289,7 +1293,7 @@ vi:
     what_is_this: Cái gì đây?
     width: Rộng
     year: Năm
-    you_have_no_orders_yet: You have no orders yet.
+    you_have_no_orders_yet: Bạn chưa có đơn hàng nào.
     your_cart_is_empty: Sọt hàng rỗng
     your_order_is_empty_add_product: "Đơn hàng của bạn rỗng, xin hay tìm và thêm vào sản phảm như trên"
     zip: Mã bưu điện

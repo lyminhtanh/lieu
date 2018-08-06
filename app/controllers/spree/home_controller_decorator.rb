@@ -7,7 +7,7 @@ Spree::HomeController.class_eval do
     @taxonomies = Spree::Taxonomy.includes(root: :children)
     @product_categories = @taxonomies.first.root.children
     @brands = @taxonomies.last.root.children
-
+    @customer_contact = Spree::CustomerContact.new
   end
   def self.is_first_item(items, item)
     items.first == item
