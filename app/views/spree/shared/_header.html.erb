@@ -1,15 +1,20 @@
-<div id="spree-header">
+<div id="spree-header" class="navbar-fixed-top">
   <header id="header" data-hook>
     <div class="container">
-      <div class="row">
-        <figure id="logo" class="col-md-4 col-sm-3" data-hook>
+      <div class="home-head-left row col-xs-3">
+        <figure id="logo" data-hook>
           <%= logo %>
         </figure>
-        <%= render partial: 'spree/shared/nav_bar' %>
       </div>
+      <div class="home-head-right row col-xs-9">
+        <div class="home-head-social row">
+          <%= render partial: 'spree/shared/social_bar' %>
+        </div>
+        <div class="home-head-nav row">
+          <%= render partial: 'spree/shared/nav_bar' %>
+        </div>
+      </div>
+
     </div>
   </header>
-  <div class="container">
-    <%= render partial: 'spree/shared/main_nav_bar' %>
-  </div>
 </div>

@@ -3,8 +3,372 @@
  * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
  * the top of the compiled file, but it's generally better to create a new file per style scope.
  *
- *= require spree/frontend
+ /**= require spree/frontend*/
 
- *= require_self
- *= require_tree .
-*/
+ /**= require_self*/
+ /**= require_tree .*/
+
+/*@import "bootstrap";*/
+body{
+    animation-name: fadeIn;
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+}
+body >.container {
+    margin: 2px 0;
+    width: 100%;
+    padding: 0;
+    margin-top: 123px;
+    overflow: hidden;
+
+}
+.home-body{
+    padding: 0;
+}
+#spree-header #header > #container{
+margin: 0;
+
+}
+
+#spree-header{
+/*border-bottom-style: groove;*/
+    box-shadow: 0 2px #BBBBBB;
+    padding-top: 0 !important;
+    margin-bottom: 0
+;
+}
+#spree-header #header{
+    background-color: white;
+}
+
+
+.home-banner-carousel, .home-product-cate-carousel, .home-partners-carousel{
+    display: block;
+    /*width: max-content;*/
+    height: -moz-calc(100vh - 141px); /* Firefox */
+    height: -webkit-calc(100vh - 141px); /* Chrome, Safari */
+    height: calc(100vh - 141px); /* IE9+ and future browsers */
+    /*background-color: #BBBBBB;*/
+    /*margin-top: 129px;*/
+    /*background: url("http://via.placeholder.com/1440x720") no-repeat center;*/
+    position: relative;
+}
+
+.home-product-cate-carousel, .home-partners-carousel{
+    display: block;
+    /*width: max-content;*/
+    height: 50vh; /* Firefox */
+    /*height: -webkit-calc(70vh - 141px); !* Chrome, Safari *!*/
+    /*height: calc(70vh - 141px); !* IE9+ and future browsers *!*/
+    /*!*background-color: #BBBBBB;*!*/
+    /*margin-top: 129px;*/
+    /*background: url("http://via.placeholder.com/1440x720") no-repeat center;*/
+    position: relative;
+}
+
+.home-banner-carousel img{
+    width: 100%;
+    height: 100%;
+}
+.home-banner-carousel div{
+    position: absolute;
+    text-align: center;
+    bottom: 2vh;
+    left: 2vw;
+    right: 2vw;
+    border-radius: 25px;
+    height: 30%;
+    background-color: black;
+    opacity: 0.5;
+    color: white;
+}
+button{
+
+}
+
+.home-product-cate-wrapper{
+    margin: 2vh 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+.home-partners-carousel{
+    border-bottom: 1px solid #d8d8d8;
+
+}
+
+
+.home-product-cate-carousel{
+    display: block;
+    /*height: 200px;*/
+    width: 100%;
+    /*background: url("http://via.placeholder.com/300x200") no-repeat center;*/
+    margin-bottom: 5vh;
+
+}
+/*.home-product-cat-info{*/
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*align-items: center;*/
+    /*border: 1px solid #d8d8d8;*/
+    /*margin: inherit;*/
+/*}*/
+
+/* Home Events */
+.home-events{
+    display: flex;
+    align-content: center;
+    margin: 1vh 5vw;
+    /*
+    justify-content: center;
+    */
+    /*flex-flow: column wrap;*/
+    flex-direction: row;
+    border-bottom: 1px solid #d8d8d8;
+}
+.home-event-item{
+    margin: 1vh 1vw;
+    height: 400px;
+    width: 300px;
+
+
+
+}
+.home-event-item-img{
+    height: 300px;
+    width: 300px;
+    background: url("http://via.placeholder.com/300x400") no-repeat center;
+
+}
+.home-event-item-description{
+
+}
+
+.home-partners-carousel{
+    /*display: flex;*/
+    /*flex-direction: row;*/
+    /*justify-content: center;*/
+    /*border-bottom: 1px solid #d8d8d8;*/
+    width: 100vw;
+
+
+}
+.home-partner-item{
+    height: 150px;
+    width: 200px;
+    background: url("http://via.placeholder.com/200x150") no-repeat center;
+    margin: 1vw;
+
+}
+
+.home-partners-title{
+    color: #730E15;
+    font-size: medium;
+    text-align: center;
+}
+
+.home-footer{
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+.home-footer-company-info-wrapper{
+
+}
+
+/*nav-bar*/
+#spree-header .nav a{
+    font-size: 1.5em;
+    color: #2d2d2d;
+}
+#nav-bar{
+    border-top: 1px solid #d8d8d8;;
+}
+#spree-header .nav a:hover{
+    background: none;
+    color: #ef1c23;
+}
+/*social-bar*/
+.social-bar-icon{
+    font-size: large;
+    margin: 0 1vw;
+}
+.social-bar-icon:hover{
+    color: #ef1c23;
+}
+
+/* footer */
+.home-footer.row::before{
+    display: none;
+}
+#map{
+    height: 300px;
+    /*width: 100%;*/
+    margin: 2vw 2vw 2vw 0;
+
+}
+
+.home-end-trade-logo img{
+    width:100%;
+    height: 300px;
+}
+
+.carousel-inner{
+
+    /*color: white;*/
+}
+.carousel-inner img{
+    /*width: 100%;*/
+    margin: 3vh auto;
+}
+.carousel-inner .item div{
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    text-align: center;
+    /*text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);*/
+
+    /*border-radius: 25px;*/
+    height: 30%;
+    /*background-color: black;*/
+    /*opacity: 0.5;*/
+}
+
+.carousel-inner .item h5{
+    color: #ef1c23;
+    font-size: 1.5em;
+}
+.carousel-inner .item p{
+    color: black;
+    font-size: 1em;
+}
+
+
+.carousel-caption{
+    background-color: black;
+    opacity: 0.5;
+    color: white;
+}
+
+.alert{
+    opacity: 1;
+}
+.alert-notice, .alert-success{
+    text-align: center;
+    -webkit-transition: opacity 3s ease-in-out;
+    -moz-transition: opacity 3s ease-in-out;
+    -ms-transition: opacity 3s ease-in-out;
+    -o-transition: opacity 3s ease-in-out;
+    opacity: 1;
+    position: absolute;
+    right: 10vw;
+    top: 0;
+}
+
+.contact-page .btn, .send-contact-info-btn-wrapper button, .view-more-btn{
+    color: #fff;
+    background-color: #ef1c23;
+    border: none;
+}
+.contact-page .btn a{
+    color: #fff;
+}
+.send-contact-info-btn-wrapper button{
+    margin: 5vh 0;
+    width: 100%;
+}
+
+.carousel-control, .carousel-control:hover, .carousel-control:focus{
+    background: none !important;
+    /*color: #ef1c23;*/
+}
+.carousel-control .glyphicon{
+    color: black;
+    opacity: 0.2
+}
+/*FOOTER*/
+.home-footer {
+    margin: 0;
+    padding-left: 5vw;
+    /*padding-right: 2.5vw;*/
+}
+
+.home-footer h3{
+    color: #ef1c23;
+}
+
+
+/*COPY-RIGHT*/
+.copyright-footer{
+    position: relative;
+    background-color: #ef1c23;
+    opacity: 0.8;
+
+}
+.copyright-info{
+    margin-left: 5vw;
+    float: left;
+    color: white;
+    padding: 1vw 1vh;
+}
+.trade-logo{
+    margin-right: 5vw;
+    float: right;
+}
+.trade-logo img{
+    padding: 1vw 1vh;
+    width: 10vw;
+    /*height: 50% ;*/
+}
+
+/*ABOUT-US*/
+article{
+    position: relative;
+    /* text-align: center; */
+    margin-left: 20vw;
+}
+.about-us-img{
+
+    margin-top: 5vh;
+}
+.about-us-img img{
+    width: 100%;
+}
+
+.about-us-content h1{
+    color: #ef1c23;
+    border-bottom: 1px solid #d8d8d8;
+    padding-bottom: 1vh;
+    width: fit-content;
+}
+
+
+
+.contact-page{
+    grid-template-columns: 50% 50%;
+    margin-top: 8vh;
+    margin-left: 5vw;
+}
+
+/*GENERAL*/
+.lieu-red-text{
+    color: #ef1c23;
+}
+.lieu-bottom-border{
+    border-bottom: 1px solid #d8d8d8;
+}
+
+/*PRODUCT*/
+[data-hook="product_left_part"]{
+    padding: 5vh 0 0 5vw;
+}
+[data-hook="product_right_part"]{
+    padding: 5vh 5vw;
+}
+[data-hook="product_right_part"] [data-hook="description"]{
+    padding-bottom: 2vh;
+}
+.product-title{
+    margin-top: 0;
+    padding-bottom: 2vh;
+}

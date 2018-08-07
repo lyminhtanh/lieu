@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_07_100897) do
+ActiveRecord::Schema.define(version: 2018_08_06_235342) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -46,6 +46,17 @@ ActiveRecord::Schema.define(version: 2018_07_07_100897) do
     t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
     t.index ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id"
     t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
+  end
+
+  create_table "spree_about_us", force: :cascade do |t|
+    t.text "title1"
+    t.text "subtitle1"
+    t.text "body1"
+    t.text "title2"
+    t.text "subtitle2"
+    t.text "body2"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "spree_addresses", force: :cascade do |t|
@@ -121,6 +132,21 @@ ActiveRecord::Schema.define(version: 2018_07_07_100897) do
     t.index ["id", "type"], name: "index_spree_calculators_on_id_and_type"
   end
 
+  create_table "spree_company_contact_infos", force: :cascade do |t|
+    t.text "branch_name"
+    t.text "contact_info_title"
+    t.text "address"
+    t.text "phone"
+    t.text "email"
+    t.float "lat"
+    t.float "lng"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "recruitment_file_url"
+    t.text "recruitment_title"
+    t.text "recruitment_description"
+  end
+
   create_table "spree_countries", force: :cascade do |t|
     t.string "iso_name"
     t.string "iso"
@@ -151,6 +177,15 @@ ActiveRecord::Schema.define(version: 2018_07_07_100897) do
     t.index ["address_id"], name: "index_spree_credit_cards_on_address_id"
     t.index ["payment_method_id"], name: "index_spree_credit_cards_on_payment_method_id"
     t.index ["user_id"], name: "index_spree_credit_cards_on_user_id"
+  end
+
+  create_table "spree_customer_contacts", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.string "phone"
+    t.string "address"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "spree_customer_returns", force: :cascade do |t|
@@ -478,6 +513,7 @@ ActiveRecord::Schema.define(version: 2018_07_07_100897) do
     t.boolean "promotionable", default: true
     t.string "meta_title"
     t.datetime "discontinue_on"
+    t.text "product_doc_url"
     t.index ["available_on"], name: "index_spree_products_on_available_on"
     t.index ["deleted_at"], name: "index_spree_products_on_deleted_at"
     t.index ["discontinue_on"], name: "index_spree_products_on_discontinue_on"
@@ -1099,6 +1135,29 @@ ActiveRecord::Schema.define(version: 2018_07_07_100897) do
     t.index ["position"], name: "index_spree_taxons_on_position"
     t.index ["rgt"], name: "index_spree_taxons_on_rgt"
     t.index ["taxonomy_id"], name: "index_taxons_on_taxonomy_id"
+  end
+
+  create_table "spree_themes", force: :cascade do |t|
+    t.string "name"
+    t.string "state"
+    t.string "template_file_file_name"
+    t.string "template_file_content_type"
+    t.integer "template_file_file_size"
+    t.datetime "template_file_updated_at"
+  end
+
+  create_table "spree_themes_templates", force: :cascade do |t|
+    t.string "name"
+    t.text "body"
+    t.string "path"
+    t.string "format"
+    t.string "locale"
+    t.string "handler"
+    t.boolean "partial", default: false
+    t.integer "theme_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["theme_id"], name: "index_spree_themes_templates_on_theme_id"
   end
 
   create_table "spree_trackers", force: :cascade do |t|
