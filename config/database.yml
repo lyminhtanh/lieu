@@ -22,4 +22,4 @@ test:
 
 production:
   <<: *default
-  database: lieu_vn_prod
+  database: postgresql-colorful-30232
