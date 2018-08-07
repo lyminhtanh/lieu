@@ -907,6 +907,7 @@ vi:
     process: Quá trình
     product: Sản phẩm
     product_details: Chi tiết sản phẩm
+    product_doc_url: Link tải tài liệu kỹ thuật
     product_has_no_description: Sản phẩm không có chú thích
     product_not_available_in_this_currency: Sản phẩm này không được cung cấp ở tiền tệ được chọn.
     product_properties: "Đặc tính sản phẩm"

@@ -27,6 +27,14 @@
           <%= f.error_message_on :description %>
         <% end %>
       </div>
+
+      <div data-hook="admin_product_form_product_doc_url">
+        <%= f.field_container :product_doc_url, class: ['form-group'] do %>
+          <%= f.label :product_doc_url, Spree.t(:product_doc_url) %>
+          <%= f.text_field :product_doc_url, class: 'form-control' %>
+        <% end %>
+      </div>
+
     </div>
 
     <div class="col-xs-12 col-md-4" data-hook="admin_product_form_right">

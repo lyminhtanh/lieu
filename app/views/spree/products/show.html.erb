@@ -28,10 +28,14 @@
     <div class="col-md-8 col-sm-7" data-hook="product_right_part">
       <div data-hook="product_right_part_wrap">
         <div id="product-description" data-hook="product_description">
-          <h1 class="product-title" itemprop="name"><%= @product.name %></h1>
+          <h1 class="product-title lieu-red-text lieu-bottom-border" itemprop="name"><%= @product.name.upcase %></h1>
 
-          <div class="well" itemprop="description" data-hook="description">
+          <div class="lieu-bottom-border" itemprop="description" data-hook="description">
             <%= product_description(@product) %>
+          </div>
+
+          <div class="lieu-bottom-border" itemprop="product_doc" data-hook="product_doc">
+            <a href=<%= @product.product_doc_url %> >Tải file</a>
           </div>
 
           <div id="cart-form" data-hook="cart_form">

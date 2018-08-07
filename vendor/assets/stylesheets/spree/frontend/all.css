@@ -93,6 +93,12 @@ button{
     border-bottom: 1px solid #d8d8d8;
 }
 
+.home-partners-carousel{
+    border-bottom: 1px solid #d8d8d8;
+
+}
+
+
 .home-product-cate-carousel{
     display: block;
     /*height: 200px;*/
@@ -342,4 +348,27 @@ article{
     grid-template-columns: 50% 50%;
     margin-top: 8vh;
     margin-left: 5vw;
+}
+
+/*GENERAL*/
+.lieu-red-text{
+    color: #ef1c23;
+}
+.lieu-bottom-border{
+    border-bottom: 1px solid #d8d8d8;
+}
+
+/*PRODUCT*/
+[data-hook="product_left_part"]{
+    padding: 5vh 0 0 5vw;
+}
+[data-hook="product_right_part"]{
+    padding: 5vh 5vw;
+}
+[data-hook="product_right_part"] [data-hook="description"]{
+    padding-bottom: 2vh;
+}
+.product-title{
+    margin-top: 0;
+    padding-bottom: 2vh;
 }

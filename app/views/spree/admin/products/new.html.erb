@@ -55,6 +55,13 @@
         <% end %>
       </div>
 
+      <div data-hook="new_product_doc_url" class="col-xs-12 col-md-4">
+        <%= f.field_container :product_doc_url, class: ['form-group'] do %>
+          <%= f.label :product_doc_url, Spree.t(:product_doc_url) %>
+          <%= f.text_field :product_doc_url, class: 'form-control' %>
+        <% end %>
+      </div>
+
     </div>
 
     <div data-hook="product-from-prototype" id="product-from-prototype">
