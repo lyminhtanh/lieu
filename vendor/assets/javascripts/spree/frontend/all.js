@@ -28,4 +28,4 @@ $(document).ready(() => {
         interval: 2000
     });
 
-});
+});//= require spree/frontend/spree_i18n
