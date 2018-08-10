@@ -11,6 +11,11 @@ group :production do
 end
 group :development, :test do
   gem 'sqlite3'
+  gem 'capistrano', '~> 3.4.0'
+  gem 'capistrano-rails', '~> 1.1.3'
+  # gem 'capistrano-rbenv', '~> 2.0.3'
+  gem 'capistrano-rvm'
+  # gem 'rvm1-capistrano3', :require => false
 end
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
