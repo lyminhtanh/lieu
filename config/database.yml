@@ -22,4 +22,6 @@ test:
 
 production:
   <<: *default
-  database: postgresql-colorful-30232
+  username: lieudb
+  password: TrinCueshUs2sw2
+  database: lieu_vn_prod
