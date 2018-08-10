@@ -1,2 +1,2 @@
-class Spree::Admin::AboutUsesController < ResourceController
+class AboutUsesController < ResourceController
 end

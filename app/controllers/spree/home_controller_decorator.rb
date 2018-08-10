@@ -5,8 +5,8 @@ Spree::HomeController.class_eval do
     @products = @searcher.retrieve_products
     @products = @products.includes(:possible_promotions) if @products.respond_to?(:includes)
     @taxonomies = Spree::Taxonomy.includes(root: :children)
-    @product_categories = @taxonomies.first.root.children
-    @brands = @taxonomies.last.root.children
+    @product_categories = @taxonomies.first.root.children unless @taxonomies.first.nil?
+    @brands = @taxonomies.last.root.children unless @taxonomies.last.nil?
     @customer_contact = Spree::CustomerContact.new
   end
   def self.is_first_item(items, item)

@@ -25,7 +25,7 @@
 <!--      <div><%#= taxonomy.name %></div>-->
         <%#=   image_tag Rails.application.routes.url_helpers.rails_representation_url taxonomy.icon.try(:attachment).variant(resize: "300x200") if taxonomy.icon %>
         <%#= link_to image_tag(main_app.url_for(@image.url(:small))), main_app.url_for(@image.url(:product)) %>
-<!--      </div>-->
+<!--      </div>--
     <%# end %>
     <div id="carouselCategoriesIndicators" class="carousel slide" data-ride="carousel">
 <!--      <ol class="carousel-indicators">-->
@@ -34,7 +34,7 @@
 <!--        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>-->
 <!--      </ol>-->
       <div class="carousel-inner">
-        <%  @product_categories.each do |taxonomy| %>
+        <%  @product_categories.each unless @produc_categories.nil? do |taxonomy| %>
           <% if Spree::HomeController.is_first_item @product_categories, taxonomy %>
             <div class="item active">
               <%= Spree::HomeController.gen_product_category_image_tag taxonomy%>
@@ -135,7 +135,7 @@
         <!--        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>-->
         <!--      </ol>-->
         <div class="carousel-inner">
-          <%  @brands.each do |taxonomy| %>
+          <%  @brands.each unless @brand.nil? do |taxonomy| %>
             <% if Spree::HomeController.is_first_item @brands, taxonomy %>
               <div class="item active">
                 <%= Spree::HomeController.gen_product_category_image_tag taxonomy%>

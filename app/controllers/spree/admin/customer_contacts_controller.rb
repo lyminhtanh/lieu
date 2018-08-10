@@ -1,2 +1,2 @@
-class Spree::Admin::CustomerContactsController < ResourceController
+class CustomerContactsController < ResourceController
 end
