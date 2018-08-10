@@ -6,6 +6,7 @@
 # server 'example.com', user: 'deploy', roles: %w{app db web}, my_property: :my_value
 # server 'example.com', user: 'deploy', roles: %w{app web}, other_property: :other_value
 server '207.148.67.91', user: 'lieuvn', roles: %w{db app web}
+server '207.148.67.91', user: 'lieudb', roles: %w{db}
 
 
 # role-based syntax
@@ -30,7 +31,7 @@ server '207.148.67.91', user: 'lieuvn', roles: %w{db app web}
 # http://capistranorb.com/documentation/getting-started/configuration/
 # Feel free to add new variables to customise your setup.
 
-config.require_master_key = true
+# config.require_master_key = true
 set :stage, :production
 # Custom SSH Options
 # ==================

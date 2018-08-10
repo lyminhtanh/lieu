@@ -25,7 +25,7 @@ require 'capistrano/deploy'
 # If you are using rvm add these lines:
 require 'capistrano/rvm'
 require 'capistrano/rails'
-require 'capistrano/passenger'
+# require 'capistrano/passenger'
 require 'capistrano/bundler'
 
 set :rvm_type, :user
