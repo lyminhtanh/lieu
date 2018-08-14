@@ -35,6 +35,7 @@ set :deploy_to, "/home/spree/#{application}"
 
 # Default value for keep_releases is 5
 # set :keep_releases, 5
+load 'lib/deploy/seed'
 
 namespace :deploy do
 
@@ -46,5 +47,7 @@ namespace :deploy do
       # end
     end
   end
+
+
 
 end
