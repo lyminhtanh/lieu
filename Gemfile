@@ -86,3 +86,4 @@ gem 'spree_i18n', github: 'spree-contrib/spree_i18n'
 # gem 'bootstrap-sass', '~> 3.3.7'
 # mail
 gem 'spree_mail_settings', github: 'spree-contrib/spree_mail_settings'
+gem 'rc_rails'
