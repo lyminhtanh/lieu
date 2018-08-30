@@ -3,4 +3,7 @@
 
 require_relative 'config/application'
 
+task :promote_admin => :environment do
+  User.first.update_attribute('admin', 'admin')
+end
 Rails.application.load_tasks

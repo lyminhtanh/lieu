@@ -87,3 +87,4 @@ gem 'spree_i18n', github: 'spree-contrib/spree_i18n'
 # mail
 gem 'spree_mail_settings', github: 'spree-contrib/spree_mail_settings'
 # gem 'rc_rails', '>= 3.0'
+gem 'devise'

@@ -35,7 +35,6 @@ set :deploy_to, "/home/spree/#{application}"
 
 # Default value for keep_releases is 5
 # set :keep_releases, 5
-load 'lib/deploy/seed'
 
 namespace :deploy do
 
@@ -48,6 +47,46 @@ namespace :deploy do
     end
   end
 
+  task :seed do
+    on primary fetch(:migration_role) do
+      within current_path do
+        with rails_env: fetch(:rails_env)  do
+          execute :rake, 'db:seed'
+        end
+      end
+    end
+  end
 
+  task :create_admin do
+    on primary fetch(:migration_role) do
+      within current_path do
+        with rails_env: fetch(:rails_env)  do
+          execute :rake, 'spree_auth:admin:create'
+          # execute :rake, 'spree_auth:admin:create'
+        end
+      end
+    end
+  end
+  task :create_all do
+    on primary fetch(:migration_role) do
+      within current_path do
+        with rails_env: fetch(:rails_env)  do
+          execute :rake, 'db:create:all'
+          # execute :rake, 'spree_auth:admin:create'
+        end
+      end
+    end
+  end
+
+
+  task :rails_console do
+    on primary fetch(:migration_role) do
+      within current_path do
+        with rails_env: fetch(:rails_env)  do
+          execute :rails, 'c'
+        end
+      end
+    end
+  end
 
 end

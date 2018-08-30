@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  devise_for :users
+  devise_scope :user do
+    get '/login', to: "devise/sessions#new"
+    get '/signup', to: "devise/registrations#new"
+    delete '/logout', to: "devise/sessions#destroy"
+  end
   # This line mounts Spree's routes at the root of your application.
   # This means, any requests to URLs such as /products, will go to
   # Spree::ProductsController.
